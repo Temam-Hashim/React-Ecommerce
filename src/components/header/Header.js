@@ -10,7 +10,6 @@ import { FaAngleDown } from "react-icons/fa6";
 import HeaderSearch from "./search-box";
 import Navigation from "./navigation";
 
-
 function Header() {
   return (
     <div className="headerWrapper">
@@ -24,29 +23,50 @@ function Header() {
 
       <div className="sub-strip">
         <div className="container">
-            <div className="row">
-                <div className="col-md-4 sub-info" >
-                    <Link to="/about" className="sub-link"><span>About us</span></Link>
-                    <Link to="/my-account" className="sub-link"><span>My Account</span></Link>
-                    <Link to="/wish-list" className="sub-link"><span>Wish list</span></Link>
-                    <Link to="/order-tracking" className="sub-link"><span>Order tracking</span></Link>
-                </div>
-
-
-                <div className="col-md-8 sub-info d-flex justify-content-around align-items-center pr-5">
-                        <p className="text-center pt-3"> <PiHandPalmLight size={24}/> 100% Secure delivery and secure payment</p>
-                        <p className="text-center pt-3"> Need help? Call Us: <span class="text-info font-weight-bold">+251 917 94 85 44</span></p>
-                        <Link to="/about" className="sub-link"><span>English <FaAngleDown/></span></Link>
-                        <Link to="/about" className="sub-link"><span>ETB <FaAngleDown/></span></Link>
-                </div>
-
+          <div className="row">
+            <div className="col-md-4 sub-info">
+              <Link to="/about" className="sub-link">
+                <span>About us</span>
+              </Link>
+              <Link to="/my-account" className="sub-link">
+                <span>My Account</span>
+              </Link>
+              <Link to="/wish-list" className="sub-link">
+                <span>Wish list</span>
+              </Link>
+              <Link to="/order-tracking" className="sub-link">
+                <span>Order tracking</span>
+              </Link>
             </div>
-     
+
+            <div className="col-md-8 sub-info d-flex justify-content-around align-items-center pr-5">
+              <p className="text-center pt-3">
+                {" "}
+                <PiHandPalmLight size={24} /> 100% Secure delivery and secure
+                payment
+              </p>
+              <p className="text-center pt-3">
+                {" "}
+                Need help? Call Us:{" "}
+                <span class="text-info font-weight-bold">
+                  +251 917 94 85 44
+                </span>
+              </p>
+              <Link to="/about" className="sub-link">
+                <span>
+                  English <FaAngleDown />
+                </span>
+              </Link>
+              <Link to="/about" className="sub-link">
+                <span>
+                  ETB <FaAngleDown />
+                </span>
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
 
-
-    
       <header className="header">
         <div className="container">
           <div class="row">
@@ -59,7 +79,7 @@ function Header() {
             <div className="col-sm-10 d-flex align-items-center part2">
               <CountryDrop />
               {/* header search */}
-             <HeaderSearch/>
+              <HeaderSearch />
 
               {/* cart and account area */}
               <div className="part3 d-flex align-items-center ml-auto p-3">
@@ -82,11 +102,7 @@ function Header() {
           </div>
         </div>
       </header>
-
-      <Navigation/>
-
-  
-
+      <Navigation />
     </div>
   );
 }

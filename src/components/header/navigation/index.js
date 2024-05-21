@@ -6,20 +6,19 @@ import { Link } from "react-router-dom";
 import { FaShirtsinbulk } from "react-icons/fa";
 import { RiAedElectrodesLine } from "react-icons/ri";
 import { TbDeviceDesktopPlus } from "react-icons/tb";
-
-
-
-
-
+import { MdOutlineMonitorHeart } from "react-icons/md";
+import { FaBlog } from "react-icons/fa";
+// import { MdOutlineEmojiFoodBeverage } from "react-icons/md";
+import { LuContact } from "react-icons/lu";
 
 function Navigation() {
   return (
     <nav>
       <div className="container">
         <div className="row">
-          <div className="col-md-3 nav-part1">
+          <div className="col-sm-2 nav-part1 justify-content-center">
             <Button className="all-cat-tab align-items-center ">
-              <span className="me-2" style={{ marginRight: 3 }}>
+              <span className="me-2">
                 <IoIosMenu size={20} />
               </span>
               <span class="text">ALL CATEGORIES</span>
@@ -28,35 +27,89 @@ function Navigation() {
               </span>
             </Button>
           </div>
-          <div className="col-md-9 nav-part2 d-flex align-items-center">
+
+          <div className="col-sm-10 nav-part2 d-flex align-items-center  justify-content-center">
             <ul className="list list-inline ml-auto">
               <li className="list-inline-item">
-                <Link to="/">Home  <span className="ms-2"><FaAngleDown/></span></Link>
-
+                <Link to="/">
+                  <Button>
+                    Home{" "}
+                    <span className="ms-2 mt-0">
+                      <FaAngleDown size={18} />
+                    </span>
+                  </Button>
+                </Link>
               </li>
               <li className="list-inline-item">
-                <Link to="/">Shop <span className="ms-2"><FaAngleDown/></span></Link>
+                <Link to="/">
+                  <Button>
+                    Shop{" "}
+                    <span className="ms-2 mt-0">
+                      <FaAngleDown size={18} />
+                    </span>
+                  </Button>
+                </Link>
               </li>
               <li className="list-inline-item">
-                <Link to="/"> <span className="me-1"><FaShirtsinbulk size={18}/></span> Fashion</Link>
+                <Link to="/">
+                  <Button>
+                    {" "}
+                    <span>
+                      <FaShirtsinbulk />
+                    </span>
+                    Fashion
+                  </Button>
+                </Link>
               </li>
               <li className="list-inline-item">
-                <Link to="/"> <span className="me-1"><TbDeviceDesktopPlus size={18}/></span> Electronics</Link>
+                <Link to="/">
+                  <Button>
+                    {" "}
+                    <span>
+                      <TbDeviceDesktopPlus />
+                    </span>
+                    Electronics
+                  </Button>
+                </Link>
               </li>
               <li className="list-inline-item">
-                <Link to="/"> <span className="me-1"><RiAedElectrodesLine size={18}/></span> Furniture</Link>
+                <Link to="/">
+                  <Button>
+                    {" "}
+                    <span>
+                      <RiAedElectrodesLine />
+                    </span>
+                    Furniture
+                  </Button>
+                </Link>
+              </li>
+              {/* <li className="list-inline-item">
+                <Link to="/"><span ><MdOutlineMonitorHeart /></span>  Beauty</Link>
+              </li> */}
+              {/* <li className="list-inline-item">
+                <Link to="/"><span ><MdOutlineEmojiFoodBeverage /></span> Food</Link>
+              </li> */}
+              <li className="list-inline-item">
+                <Link to="/">
+                  <Button>
+                    {" "}
+                    <span>
+                      <FaBlog />
+                    </span>
+                    Blog
+                  </Button>
+                </Link>
               </li>
               <li className="list-inline-item">
-                <Link to="/">Beauty</Link>
-              </li>
-              <li className="list-inline-item">
-                <Link to="/">Food</Link>
-              </li>
-              <li className="list-inline-item">
-                <Link to="/">Blog</Link>
-              </li>
-              <li className="list-inline-item">
-                <Link to="/">Contact</Link>
+                <Link to="/">
+                  <Button>
+                    {" "}
+                    <span>
+                      <LuContact />
+                    </span>
+                    Contact
+                  </Button>
+                </Link>
               </li>
             </ul>
           </div>
