@@ -59,6 +59,10 @@ header{
   margin-top:-40px;
 }
 
+.headerWrapper{
+  border-bottom:1px solid rgb(0, 0, 0, 0.1);
+}
+
 .headerWrapper .top-strip {
   background-color: var(--cyan-color);
   padding: 8px 0px;
@@ -76,13 +80,15 @@ header{
 
 .headerWrapper .sub-strip{
   border-bottom: 1px solid rgba(0,0,0,0.1);
+
 }
 
 .headerWrapper  .sub-info{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  font-size: 16px;
+  font-size: 12px;
+  font-style:italic;
 }
 .headerWrapper .sub-info .sub-link{
   color:var(--dark-color);
@@ -102,10 +108,12 @@ header{
 }
 .headerWrapper img {
   width: 100%;
+
 }
 .headerWrapper .part2 .countryDrop {
-  width: 150px;
-  height: 60px;
+  max-width: 150px;
+  min-height: 60px;
+  max-height: 60px;;
   min-width: 150px;
   text-align: left;
   align-items: flex-start;
@@ -121,8 +129,8 @@ header{
 }
 .headerWrapper .header .part2 .countryDrop .name {
   font-size: 14px !important;
-  text-transform: capitalize color !important;
-  color: rgb(0, 0, 0, 0.6) !important;
+  text-transform: initial !important;
+  color: rgb(0, 0, 0, 0.7) !important;
   font-weight: 700 !important;
   line-height: 22px;
 }
@@ -168,6 +176,9 @@ header{
   justify-content: flex-start;
   text-transform: capitalize;
   padding: 10px 20px;;
+}
+.locationModal .countryList li button .active{
+  background:#f7f5f5;
 }
 .locationModal .countryList .price{
   font-size: 10px;
@@ -314,10 +325,10 @@ nav .nav-part2 ul li a{
 
 nav .nav-part2 ul li a button{
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 600;
   text-decoration: none;
   outline: none;
-  color:rgba(0, 0, 0, 0.85);
+  color:rgba(0, 0, 0, 0.6);
   text-transform: uppercase;
   display: flex;
   align-items: center;
@@ -340,10 +351,54 @@ nav .nav-part2 ul li svg{
     font-variant: normal;
     text-transform: none;
     -webkit-font-smoothing: antialiased;
-    font-size: 100%;
     margin-right: 0.30rem;
     opacity: 0.9;
     -webkit-transition: opacity 0.4s cubic-bezier(.83,.26,.19,.87);
     transition: opacity 0.4s cubic-bezier(.83,.26,.19,.87);
+}
+
+nav .nav-part2 ul li{
+  position: relative;
+}
+nav .nav-part2 ul li .submenu{
+  position:absolute;
+  top:150%;
+  right:-200%;
+  min-width: 600px;
+  background:#fff;
+  font-size: 12px;
+  transition: all 0.3s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+  padding: 10px 15px;
+}
+nav .nav-part2 ul li .submenu .submenu-title{
+  padding: 10px 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 18px;
+  font-weight: 700;
+  color:var(--cyan-color);
+}
+nav .nav-part2 ul li .submenu a{
+  display: block;
+  width: 100%;;
+  padding: 5px 5px;
+}
+nav .nav-part2 ul li .submenu a button{
+  width: 100%;
+  justify-content: flex-start !important;
+  border-radius:0px !important;
+    font-size: 12px;;
+}
+
+
+nav .nav-part2 ul li .submenu a button:hover{
+ background:#faf9f9;
+}
+nav .nav-part2 ul li:hover .submenu{
+  visibility: inherit;
+  top:100%;
+  opacity: 1;;
+  
 }
 
